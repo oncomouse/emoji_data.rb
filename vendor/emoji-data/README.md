@@ -4,4 +4,4 @@ Manually vendored from iamcal/emoji-data
 single file.)
 
 Most recent vendoring from revision:
-iamcal/emoji-data@bcb566d
+iamcal/emoji-data@d989b3f
