@@ -19,7 +19,10 @@ module EmojiData
   EMOJICHAR_UNIFIED_MAP = {}
   EMOJI_CHARS.each do |ec|
     EMOJICHAR_UNIFIED_MAP[ec.unified] = ec
-    ec.variations.each  { |variant| EMOJICHAR_UNIFIED_MAP[variant] = ec }
+    if ec.non_qualified
+      EMOJICHAR_UNIFIED_MAP[ec.non_qualified] = ec
+    end
+    #ec.variations.each  { |variant| EMOJICHAR_UNIFIED_MAP[variant] = ec }
     ec.skin_variations.each  { |skin_variant| EMOJICHAR_UNIFIED_MAP[skin_variant.unified] = skin_variant }
   end
 
